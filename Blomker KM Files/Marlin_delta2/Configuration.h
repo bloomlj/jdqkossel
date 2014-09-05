@@ -83,16 +83,20 @@
 #define DELTA_SEGMENTS_PER_SECOND 200
 
 // Center-to-center distance of the holes in the diagonal push rods.
-#define DELTA_DIAGONAL_ROD 213 // mm (215) default is 213.5,changed by lijun when 20140826.
+#define DELTA_DIAGONAL_ROD 214 // mm (215) default is 213.5,changed by lijun when 20140826.
 
 // Horizontal offset from middle of printer to smooth rod center.
-#define DELTA_SMOOTH_ROD_OFFSET 145 // mm (137.0) default is 136.5,changed to 148 by lijun when 20140826.
+//can use to level
+//1.	Increasing DELTA_SMOOTH_ROD_OFFSET lowers the hotend.
+//2.	Decreasing DELTA_SMOOTH_ROD_OFFSET raises the hotend.
+
+#define DELTA_SMOOTH_ROD_OFFSET 128 // mm (137.0) default is 136.5,changed to 151  by lijun when 20140826.
 
 // Horizontal offset of the universal joints on the end effector.
 #define DELTA_EFFECTOR_OFFSET 5.5 // mm (19.9) default is 20,changed to 35 by lijun when 20140826.
 
 // Horizontal offset of the universal joints on the carriages.
-#define DELTA_CARRIAGE_OFFSET 13 // mm (19.5) mm (19.9) default is 12,changed to 13 by lijun when 20140826.
+#define DELTA_CARRIAGE_OFFSET 11.2 // mm (19.5) mm (19.9) default is 12,changed to 13 by lijun when 20140826.
 
 // Effective horizontal distance bridged by diagonal push rods.
 #define DELTA_RADIUS (DELTA_SMOOTH_ROD_OFFSET-DELTA_EFFECTOR_OFFSET-DELTA_CARRIAGE_OFFSET)
@@ -343,8 +347,8 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 // For deltabots this means top and center of the cartesian print volume.
 #define MANUAL_X_HOME_POS 0
 #define MANUAL_Y_HOME_POS 0
-//changed by lijun 20140826,default is 239
-#define MANUAL_Z_HOME_POS 190.9  // For delta: Distance between nozzle and print surface after homing. 
+//changed by lijun 20140826,default is 239,the last paper test is 190.9
+#define MANUAL_Z_HOME_POS 190.5  // For delta: Distance between nozzle and print surface after homing. the  l
 
 #define AUTOLEVEL_GRID 26  // 26 Distance between autolevel Z probing points, should be less than print surface radius/3.
 
@@ -356,7 +360,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 
 // default settings
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {100, 100, 100, 95} //need test
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {100, 100, 100, 105} //need test
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   {100, 100, 100, 105}
 #define DEFAULT_MAX_FEEDRATE          {300, 300, 300, 300}    // (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {1000,1000,1000,1000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
