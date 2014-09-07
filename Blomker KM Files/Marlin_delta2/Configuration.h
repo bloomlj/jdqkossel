@@ -348,7 +348,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 #define MANUAL_X_HOME_POS 0
 #define MANUAL_Y_HOME_POS 0
 //changed by lijun 20140826,default is 239,the last paper test is 190.9
-#define MANUAL_Z_HOME_POS 190.5  // For delta: Distance between nozzle and print surface after homing. the  l
+#define MANUAL_Z_HOME_POS 239.8  // For delta: Distance between nozzle and print surface after homing. the  l
 
 #define AUTOLEVEL_GRID 26  // 26 Distance between autolevel Z probing points, should be less than print surface radius/3.
 
@@ -512,8 +512,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
   #define ULTIPANEL
 #endif
 
-#ifdef ULTIPANEL
-//  #define NEWPANEL  //enable this if you have a click-encoder panel
+#ifdef ULTIPANEL/  #define NEWPANEL  //enable this if you have a click-encoder panel
   #define SDSUPPORT
   #define ULTRA_LCD
   #ifdef DOGLCD // Change number of lines to match the DOG graphic display
