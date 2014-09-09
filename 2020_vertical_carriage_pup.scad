@@ -7,7 +7,7 @@ use_middle_belt = 0;
 use_side_belt = 0;
 
 
-main_cube_width = 42; //1515 => 39,2020=>42
+main_cube_width = 46; //1515 => 39,2020=>42
 main_cube_length = 40;
 main_height = 8;
 height_offset = 0;
