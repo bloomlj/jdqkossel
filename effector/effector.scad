@@ -39,7 +39,7 @@ module effector() {
     //change to m6_internal for j-head from taobao
     //translate([0, 0, -6]) # import("m6_internal.stl");
 		translate([0, 0, -6]) 
-			 cylinder(r=4.1, h=4);
+			 cylinder(r=4.25, h=4);
     for (a = [0:60:359]) rotate([0, 0, a]) {
       translate([0, mount_radius, 0])
 	cylinder(r=m3_wide_radius, h=2*height, center=true, $fn=12);
