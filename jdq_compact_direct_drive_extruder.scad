@@ -40,9 +40,10 @@ m3_head_radius = 3 + extra_radius;
 //drive_gear_length = 13 + 0;
 //drive_gear_tooth_depth = .2;
 
-drive_gear_outer_radius = 6.00 / 2;
-drive_gear_hobbed_radius = 6.00 / 2;
-drive_gear_hobbed_offset = 3.2;
+//for LH-001A001 Gear from taobao by bloomlj
+drive_gear_outer_radius = 12.00 / 2;
+drive_gear_hobbed_radius = 10 / 2;
+drive_gear_hobbed_offset = 2;
 drive_gear_length = 13 + 0;
 drive_gear_tooth_depth = .2;
 
