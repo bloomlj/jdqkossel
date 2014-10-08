@@ -40,11 +40,18 @@ m3_head_radius = 3 + extra_radius;
 //drive_gear_length = 13 + 0;
 //drive_gear_tooth_depth = .2;
 
-//for LH-001A001 Gear from taobao by bloomlj
-drive_gear_outer_radius = 12.00 / 2;
-drive_gear_hobbed_radius = 10 / 2;
+//for MK7 LH-001A001 Gear from taobao by bloomlj
+//drive_gear_outer_radius = 12.00 / 2;
+//drive_gear_hobbed_radius = 10 / 2;
+//drive_gear_hobbed_offset = 2;
+//drive_gear_length = 13 + 0;
+//drive_gear_tooth_depth = .2;
+
+//for MK8  Gear from taobao by bloomlj
+drive_gear_outer_radius = 9.00 / 2;
+drive_gear_hobbed_radius = 7 / 2;
 drive_gear_hobbed_offset = 2;
-drive_gear_length = 13 + 0;
+drive_gear_length = 11 + 0;
 drive_gear_tooth_depth = .2;
 
 // base width for frame plate
@@ -264,7 +271,7 @@ module filament_tunnel()
 			// push fit connector m5 hole
 			translate([0, length / 2 + 1 - 2.5 + epsilon, -height / 2 + filament_offset[2] - base_height])
 				rotate([90, 0, 0])
-					 cylinder(r = 3.25, h = 5, center = true, $fn = 16);
+					 cylinder(r = 2.8, h = 5, center = true, $fn = 16);
                 //change for m5 connector by bloomlj,maybe no need?just use a sizui?
                 //cylinder(r = 2.25, h = 5, center = true, $fn = 16);
 
