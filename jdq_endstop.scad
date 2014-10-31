@@ -2,7 +2,7 @@ include <configuration.scad>;
 
 use <microswitch.scad>;
 
-thickness = 4;  //  thicker than v-roller linear .
+thickness = 9;  //  for v-roller,set to 4,for liner set to 9(1mm thicker than linear rail)
 width = 20;  // Same as vertical extrusion.change  for 2020
 height = 16;
 
