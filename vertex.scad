@@ -36,8 +36,8 @@ module vertex(height, idler_offset, idler_space) {
       union() {
         intersection() {
           translate([0, 22, 0])
-				//default  r = 36,for 1515,for 2020,we change it to 36+5
-            cylinder(r=41, h=height, center=true, $fn=60);
+				//default  r = 36,for 1515,for 2020,we change it to 36+4.8
+            cylinder(r=40.8, h=height, center=true, $fn=60);
           translate([0, -37, 0]) rotate([0, 0, 30])
             cylinder(r=50, h=height+1, center=true, $fn=6);
         }
