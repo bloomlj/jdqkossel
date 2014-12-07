@@ -90,7 +90,7 @@
 //1.	Increasing DELTA_SMOOTH_ROD_OFFSET lowers the hotend.
 //2.	Decreasing DELTA_SMOOTH_ROD_OFFSET raises the hotend.
 
-#define DELTA_SMOOTH_ROD_OFFSET 128 // mm (137.0) default is 136.5,changed to 151  by lijun when 20140826.
+#define DELTA_SMOOTH_ROD_OFFSET 128.5 // mm (137.0) default is 136.5,changed to 151  by lijun when 20140826. 20141207:128=>128.5
 
 // Horizontal offset of the universal joints on the end effector.
 #define DELTA_EFFECTOR_OFFSET 5.5 // mm (19.9) default is 20,changed to 35 by lijun when 20140826.
