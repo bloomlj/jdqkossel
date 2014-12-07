@@ -15,7 +15,7 @@ module frame_motor() {
     // Motor cable paths.
     for (mirror = [-1, 1]) scale([mirror, 1, 1]) {
       translate([-35, 45, 0]) rotate([0, 0, -30])
-        # cube([4, 15, 15], center=true);
+         cube([4, 15, 15], center=true);
       translate([-6, 0, 0]) cylinder(r=2.5, h=40);
       translate([-11, 0, 0]) # cube([15, 4, 15], center=true);
     }
