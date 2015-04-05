@@ -22,6 +22,14 @@ thickness = 3.6;
 // to make models more parametric and allow 20x20 mm in the future.
 extrusion = 20;
 
+extrusion_channel_w = 5; //use 3 for 1515
+extrusion_channel_d = 3; //use 3 for 1515
+extrusion_fin_d = 1;
+
+vertex_radius = 40.5; //set to 36 for 1515
+vertex_x_offset = 7.25; // offset of the horizontal extrusion to the vertical one in X axis
+vertex_y_offset = 39 ;//27; // offset of the horizontal extrusion to the vertical one in Y axis
+
 // Placement for the NEMA17 stepper motors.
 motor_offset = 44;
 motor_length = 47;
