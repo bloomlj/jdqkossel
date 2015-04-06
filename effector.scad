@@ -3,8 +3,9 @@ include <configuration.scad>;
 separation = 40;  // Distance between ball joint mounting faces.
 offset = 20;  // Same as DELTA_EFFECTOR_OFFSET in Marlin.
 mount_radius = 12.5;  // Hotend mounting screws, standard would be 25mm.
-hotend_radius = 8;  // Hole for the hotend (J-Head diameter is 16mm).
-push_fit_height = 4;  // Length of brass threaded into printed plastic.
+hotend_radius = 8.3;  // Hole for the hotend (J-Head diameter is 16mm).
+//change to 2mm for taobao
+push_fit_height = 2;  // Length of brass threaded into printed plastic.
 height = 8;
 cone_r1 = 2.5;
 cone_r2 = 14;
@@ -20,7 +21,7 @@ module effector() {
 	  translate([0, offset, 0]) difference() {
 	    intersection() {
 	      cube([separation, 40, height], center=true);
-	      translate([0, -4, 0]) rotate([0, 90, 0])
+	      translate([0, -4, 0]) rotate([0, 90,  0])
 		cylinder(r=10, h=separation, center=true);
 	      translate([separation/2-7, 0, 0]) rotate([0, 90, 0])
 		cylinder(r1=cone_r2, r2=cone_r1, h=14, center=true, $fn=24);
@@ -35,7 +36,10 @@ module effector() {
     }
     translate([0, 0, push_fit_height-height/2])
       cylinder(r=hotend_radius, h=height, $fn=36);
-    translate([0, 0, -6]) # import("m5_internal.stl");
+    //change to m6_internal for j-head from taobao
+    //translate([0, 0, -6]) # import("m6_internal.stl");
+		translate([0, 0, -6]) 
+			 cylinder(r=4.25, h=4);
     for (a = [0:60:359]) rotate([0, 0, a]) {
       translate([0, mount_radius, 0])
 	cylinder(r=m3_wide_radius, h=2*height, center=true, $fn=12);
