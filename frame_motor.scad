@@ -7,7 +7,7 @@ $fn = 280;
 
 fin_w=5;
 fin_d=4;  // 5x4 for the vertical extrusion fins
-fins=1;   // Yes use fins
+fins=0;   // Yes use fins
 
 motor_frame_height = 2.5*extrusion;
 motor_z_offset = 1.5; // use 1.5 for 40mm height

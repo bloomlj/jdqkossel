@@ -15,9 +15,10 @@ module extrusion_cutout(h, extra, cut_w=2, cut_d=2, corner_r=0.5) {
     translate([-(extrusion-corner_r)/2,(extrusion-corner_r)/2,0]) cylinder(h=h, r=corner_r,center=true);
     translate([-(extrusion-corner_r)/2,-(extrusion-corner_r)/2,0]) cylinder(h=h, r=corner_r,center=true);
   }
-  for (a = [0:90:359]) rotate([0, 0, a]) {
-   translate([(extrusion-cut_d)/2+0.5, 0, 0]) cube([cut_d, cut_w, h+1], center=true);
-  }
+  //set the 2020 frame kazi,only need  2 kazi.
+//  for (a = [0:180:359]) rotate([0, 0, a]) {
+//   translate([(extrusion-cut_d)/2+0.5, 0, 0]) cube([cut_d, cut_w, h+1], center=true);
+//  }
   
  }
 }
@@ -43,8 +44,8 @@ module fin(fin_l=50, fin_w=2, fin_d=2){
 module vertex(height, idler_offset, idler_space, fin_w=5, fin_d, fins=0, fn=180) {
  translate([0,2.5,0])union() {
  // Pads to improve print bed adhesion for slim ends.
-  translate([-37.5, 52.2, -height/2]) cylinder(r=8, h=0.4);
-  translate([37.5, 52.2, -height/2]) cylinder(r=8, h=0.4);
+  translate([-37.5, 52.2, -height/2]) cylinder(r=10, h=0.4);
+  translate([37.5, 52.2, -height/2]) cylinder(r=10, h=0.4);
 
   difference() {
    union() {
@@ -142,7 +143,7 @@ module vertex(height, idler_offset, idler_space, fin_w=5, fin_d, fins=0, fn=180)
 
 
 translate([0, 0, extrusion*2.5/2]) 
-vertex(extrusion*2.5, idler_offset=0, idler_space=10, fin_w=5, fin_d=4, fins=1, fn=20 );
+vertex(extrusion*2.5, idler_offset=0, idler_space=10, fin_w=5, fin_d=4, fins=0, fn=20 );
 
 //translate([0, 0, 7.5]) vertex_cover(3);
 
