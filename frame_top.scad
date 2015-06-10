@@ -8,7 +8,8 @@ $fn = 240;
 
 module frame_top() {
   difference() {
-    vertex(extrusion+0.1, idler_offset=3, idler_space=12.5, fin_w=5.2, fin_d=4, fins=1, fn=280);
+    //fins= 0, remove side tube KaCao.
+    vertex(extrusion+0.1, idler_offset=3, idler_space=12.5, fin_w=5.20, fin_d=4, fins=0, fn=280);
     // M3 bolt to support idler bearings.
     translate([0, 65, 0]) rotate([90, 0, 0]) cylinder(r=m3_radius, h=55);
     

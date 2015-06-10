@@ -2,12 +2,12 @@ include <configuration.scad>;
 
 // Input parameters
 mount_thickness = 3;                             // Overall thickness (mm)
-mount_angle = 90;                                // Angle to mount the fan at (degrees),default is 45
+mount_angle = 85;                                // Angle to mount the fan at (degrees),default is 45
 hole_radius = 12.5;                              // Radius at which the effector mount holes are made (mm)
-effector_offset = 25;                            // Length of the side that offsets the fan from the effector (mm)
+effector_offset = 15;                            // Length of the side that offsets the fan from the effector (mm)
 fan_radius = 20;                                 // overall fan radius, e.g. 40mm fan = 20 (mm)
 fan_hole_pitch = 32;                             // pitch of the fan mounting holes (mm)
-hole_offset = 3;                                 // space between thru holes and edges (mm),default is 2mm
+hole_offset = 4;                                 // space between thru holes and edges (mm),default is 2mm
 hotend_radius = 8 + 0.25;                        // Radius of the hotend + buffer (mm)
 
 // Calculated parameters

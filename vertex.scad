@@ -4,7 +4,7 @@ $fn = 80;
 roundness = 6;
 
 body1_cylinder_offset = 22;  //22
-body2_cylinder_offset = -30; //-37
+body2_cylinder_offset = -18; //-37
 
 module extrusion_cutout(h, extra, cut_w=2, cut_d=2, corner_r=0.5) {
  difference() {
@@ -117,25 +117,26 @@ module vertex(height, idler_offset, idler_space, fin_w=5, fin_d, fins=0, fn=180)
      rotate([0, 0, 30*a]) translate([-(vertex_radius-body1_cylinder_offset)*a, 111, z]) {
       // % rotate([90, 0, 0]) extrusion_cutout(200, 0);
       // Screw sockets.
-      for (y = [-88, -44]) {
+      // old is -88 -44.now i want to change it.
+      for (y = [-76, -44]) {
        translate([a*(extrusion/2-0.6), y, 0]) rotate([0, a*90, 0]) screw_socket();
       }
      
       // Nut tunnels.
-	    for (z = [-1, 1]) {
-	     scale([1, 1, z]) 
-        translate([0, -99, 3]) 
-         minkowski() {
-	        rotate([0, 0, -a*30]) cylinder(r=5, h=16); //cylinder(r=m3_nut_radius, h=16);
-		      cube([0.1, 8, 0.1], center=true);
-	       }
-      }
+//	    for (z = [-1, 1]) {
+//	     scale([1, 1, z]) 
+//        translate([0, -99, 3]) 
+//         minkowski() {
+//	        rotate([0, 0, -a*30]) cylinder(r=5, h=16); //cylinder(r=m3_nut_radius, h=16);
+//		      cube([0.1, 8, 0.1], center=true);
+//	       }
+//      }
      }
     }
    }
    // ease the inside coners
-   rotate(-30)translate([vertex_x_offset+2,-2.5+vertex_y_offset/2+1,0])cylinder(h=height+1, r=1, center=true);
-   rotate(30)translate([-vertex_x_offset-2,-2.5+vertex_y_offset/2+1,0])cylinder(h=height+1, r=1, center=true);
+//   rotate(-30)translate([vertex_x_offset+2,-2.5+vertex_y_offset/2+1,0])cylinder(h=height+1, r=1, center=true);
+//   rotate(30)translate([-vertex_x_offset-2,-2.5+vertex_y_offset/2+1,0])cylinder(h=height+1, r=1, center=true);
   }
  }
 }
