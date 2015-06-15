@@ -69,8 +69,10 @@ module extruder() {
     translate([filament_offset,6.5,-10]) rotate([0,0,0]) #
       cylinder(h=60, r=1.1, $fn=12);
 
-    //pushfit/pneufit mount
-    translate([filament_offset, 6.5, 0]) # cylinder(r=2.3, h=8, $fn=12);
+    //pushfit/pneufit mount default is 2.3.
+    //for taobao small 6mm ,the  r = 2.7 
+    //for taobao large 9mm , the r = 4.3
+    translate([filament_offset, 6.5, 0]) # cylinder(r=4.6, h=8, $fn=12);
 
     //clamp slit
     translate([25,-1,10]) cube([2, 22, 35]);

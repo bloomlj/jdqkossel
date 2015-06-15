@@ -26,7 +26,7 @@ difference() {
         translate([bracket_width/2, fan_radius+hole_offset, 0])
           cylinder(r=fan_radius, h=mount_thickness);
 
-        // Fan mounting holes
+    // Fan mounting holes
         translate([m3_wide_radius+hole_offset, m3_wide_radius+hole_offset, 0])
           cylinder(r=m3_wide_radius, h=mount_thickness);
         translate([bracket_width-m3_wide_radius-hole_offset, m3_wide_radius+hole_offset, 0])
