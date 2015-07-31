@@ -2,8 +2,8 @@ include <configuration.scad>;
 
 // Overall mount dimensions
 mount_radius = 18;
-//for taobao j-head by bloomlj
-mount_thickness = 4;
+//for e3d v6
+mount_thickness = 9.8;
 
 // Through holes
 hole_radius = 12.5;
@@ -11,7 +11,7 @@ hole_radius = 12.5;
 // Slot and lip for installation
 slot_radius = 6.25;
 lip_radius = 8.1;
-lip_thickness = 1;
+lip_thickness = 4; //for e3d v6
 
 $fn = 40;
 
