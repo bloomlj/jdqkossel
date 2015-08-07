@@ -36,7 +36,7 @@ module effector() {
     }
     translate([0, 0, push_fit_height-height/2])
       cylinder(r=hotend_radius, h=height, $fn=36);
-    //change to m6_internal for j-head from taobao
+    //change to m8 for e3d v6
     //translate([0, 0, -6]) # import("m6_internal.stl");
 		translate([0, 0, -6]) 
 			 cylinder(r=4.25, h=4);
