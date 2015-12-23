@@ -12,9 +12,10 @@ module endstop() {
       cube([width, thickness, height], center=true);
       translate([0, 0, -height/4])
         cube([width+2, thickness, height/2], center=true);
+        
       translate([0, 2, 0])
-        //change  for 2020  by bloomlj
-        cube([5.5, thickness, height], center=true);
+        //change  for 2020 cudimax  by bloomlj
+        cube([5.5, 7, height], center=true);
     }
     translate([0, 0, 3]) rotate([90, 0, 0]) {
       cylinder(r=m3_wide_radius, h=20, center=true, $fn=12);
